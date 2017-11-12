@@ -1,0 +1,28 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  username: postgres
+  password: postgres
+
+development:
+  <<: *default
+  database: asgatech_development
+  host: localhost
+
+test:
+  <<: *default
+  database: asgatech_test
+  host: localhost
+
+staging:
+  <<: *default
+  database: asgatech_staging
+  username: aqjbzlnrbwuwda
+  password: f0f9d91f3440ad9ea1a87e23b498c3ad04839ca4dce17aeb4add77e3aa191f66
+
+production:
+  <<: *default
+  database: asgatech_production
+  username: aqjbzlnrbwuwda
+  password: f0f9d91f3440ad9ea1a87e23b498c3ad04839ca4dce17aeb4add77e3aa191f66

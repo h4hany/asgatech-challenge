@@ -1,0 +1,14 @@
+defaults: &defaults
+  address:              smtp.gmail.com
+  domin:                mail.gmail.com
+  port:                 587
+  user_name:            hanysayed.a@gmail.com
+  password:             01116811410
+  authentication:       :login
+  enable_starttls_auto: true
+
+development:
+  <<: *defaults
+
+test:
+  <<: *defaults
